@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% load bootstrap3 %} {% block content %}
+<div class="container">
+  <h1 style="text-align: center; font-weight: 500;">
+    LogIn
+  </h1>
+
+  <div style="width: fit-content;">
+    <form method="POST">
+      {% csrf_token %} {% bootstrap_form form %}
+      <center>
+        <input type="submit" class="btn btn-warning" value="Login" />
+      </center>
+    </form>
+  </div>
+</div>
+{% endblock content %}
